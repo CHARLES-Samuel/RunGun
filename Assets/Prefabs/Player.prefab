@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7140102283350053152}
   - component: {fileID: 265734713014726454}
   - component: {fileID: 1401590274164527964}
+  - component: {fileID: 8320616831918160415}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -205,6 +206,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   currentWeapon: {fileID: 8120881113125083073}
+--- !u!114 &8320616831918160415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723844794240634624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d49ce9ff77cd375b7ac347e2c187ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  maxHealth: 100
+  currenHealth: 0
+  healthBar: {fileID: 0}
 --- !u!1 &1374290158718412493
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +304,10 @@ PrefabInstance:
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 6730715633410160250, guid: f5bffe394febba353b2390a7df25a939, type: 3}
+    - target: {fileID: 1596327210477759117, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
+      propertyPath: timeBetweenFiring
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6766267409083217122, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
       propertyPath: m_Name
       value: Weapon
