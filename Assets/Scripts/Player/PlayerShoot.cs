@@ -22,7 +22,7 @@ public class PlayerShoot : MonoBehaviour
 
         currentWeapon.Aiming(mousPosition);
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButton(0))
         {   
             currentWeapon.TryShoot();
         }

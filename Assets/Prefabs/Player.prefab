@@ -287,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 1596327210477759117, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 6730715633410160250, guid: 678f243df34b7c1ee8e64e2999d36a1d, type: 3}
+      objectReference: {fileID: 6730715633410160250, guid: f5bffe394febba353b2390a7df25a939, type: 3}
     - target: {fileID: 6766267409083217122, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
       propertyPath: m_Name
       value: Weapon

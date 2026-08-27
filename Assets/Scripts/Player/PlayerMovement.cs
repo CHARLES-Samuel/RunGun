@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isGrounded)
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
             jumpRequested = true;
         }
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallGravity - 1) * Time.fixedDeltaTime;
         }
-        else if (rb.linearVelocity.y > 0 && !Input.GetMouseButton(0))
+        else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space))
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpGravity - 1) * Time.fixedDeltaTime;
         }
