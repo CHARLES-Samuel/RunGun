@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
+/**
+    Gere l'aspect "vie" du personnage
+*/
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
@@ -23,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
         healthBar.setMaxHealthUI(maxHealth);
     }
 
+    // Enleve de la vie au personnage
     public void TakeDamage(int damage)
     {
         currenHealth -= damage;
@@ -35,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
         healthBar.setHealthUI(currenHealth);
     }
 
+    // Enleve de la vie au personnage lorsque cela vient d'un spike
     public void TakeSpikeDamage(int damage)
     {
         if (!isInvicible)
@@ -47,11 +52,13 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    // Mort du personnage
     private void Die()
     {
         GameManager.instance.StartGame();
     }
 
+    // Fait "clignoter" le personnage pour voir qu'il est invincible
     public IEnumerator InvicibilityFlash()
     {
         while (isInvicible)
@@ -63,6 +70,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    // enleve l'invincibilite apres le temps donne
     public IEnumerator HandleInvicibilityDelay()
     {
         yield return new WaitForSeconds(invicibilityTimeAfterHit);

@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/**
+    Gere le tir du personnage
+*/
 public class PlayerShoot : MonoBehaviour
 {   
     [SerializeField] private Weapon currentWeapon;

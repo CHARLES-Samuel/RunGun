@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/**
+    Permet de bouger la camera en meme temps que le joueur en restant sur le meme axe x
+*/
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] private GameObject player;

@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/**
+    Gere le comportement des balles
+*/
 public class BulletScript : MonoBehaviour
 {   
     [SerializeField] private float bulletSpeed;

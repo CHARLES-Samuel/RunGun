@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/**
+    Gere les mouvements du personnage
+*/
 public class PlayerMovement : MonoBehaviour
 {   
     private Rigidbody2D rb;

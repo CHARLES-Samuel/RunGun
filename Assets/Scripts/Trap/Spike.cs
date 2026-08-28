@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/**
+    Module infligeant des degats
+*/
 public class Spike : MonoBehaviour
 {
     [SerializeField] private int spikeDamage;

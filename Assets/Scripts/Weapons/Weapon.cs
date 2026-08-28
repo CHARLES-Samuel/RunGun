@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/**
+    Gere le fonctionnement d'une arme
+*/
 public class Weapon : MonoBehaviour
 {
 
@@ -18,6 +21,7 @@ public class Weapon : MonoBehaviour
 
     }
 
+    // Vise une direction passee en parametre
     public void Aiming(Vector3 aimingObject)
     {   
         Vector3 rotation = aimingObject - transform.position;
@@ -25,6 +29,7 @@ public class Weapon : MonoBehaviour
         transform.rotation = Quaternion.Euler(0,0,rotZ);
     }
 
+    // Test si le tir peut etre effectue
     public bool TryShoot()
     {
         if(timer <= 0f)
@@ -36,6 +41,7 @@ public class Weapon : MonoBehaviour
         return false;
     }
 
+    // instantie une nouvelle balle
     public void Shoot()
     {
         Instantiate(bulletPrefab, bulletTransform.position, bulletTransform.rotation);

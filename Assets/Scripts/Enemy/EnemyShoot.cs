@@ -1,6 +1,9 @@
 using System.Runtime.Serialization.Formatters;
 using UnityEngine;
 
+/**
+    Gere les tires des ennemis
+*/
 public class EnemyShoot : MonoBehaviour
 {
     [SerializeField] private Weapon currentWeapon;
@@ -20,6 +23,7 @@ public class EnemyShoot : MonoBehaviour
         }        
     }
 
+    // Active le tire ennemi
     private void EnemyShooting()
     {
         currentWeapon.Aiming(target.position);
