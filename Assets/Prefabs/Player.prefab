@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1d49ce9ff77cd375b7ac347e2c187ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  maxHealth: 100
+  maxHealth: 2147483647
   currenHealth: 0
   healthBar: {fileID: 0}
   graphics: {fileID: 0}
@@ -344,7 +344,7 @@ PrefabInstance:
     - target: {fileID: 1596327210477759117, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
       propertyPath: typeOfWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: f91dabb2414a3ca2a8e5339f1f611177, type: 2}
+      objectReference: {fileID: 11400000, guid: 8bbf9c1fd81c420b1888ec1f92bb7577, type: 2}
     - target: {fileID: 1596327210477759117, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
       propertyPath: timeBetweenFiring
       value: 0.3
