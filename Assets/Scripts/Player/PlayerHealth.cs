@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
         
         if (currenHealth <= 0)
         {   
-            Debug.Log("Mort");
+            Die();
         }
 
         healthBar.setHealthUI(currenHealth);
@@ -45,6 +45,11 @@ public class PlayerHealth : MonoBehaviour
             StartCoroutine(InvicibilityFlash());
             StartCoroutine(HandleInvicibilityDelay());
         }
+    }
+
+    private void Die()
+    {
+        GameManager.instance.StartGame();
     }
 
     public IEnumerator InvicibilityFlash()

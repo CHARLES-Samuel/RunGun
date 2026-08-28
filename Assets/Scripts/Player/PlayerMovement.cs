@@ -77,7 +77,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpGravity - 1) * Time.fixedDeltaTime;
         }
-
     }
 
     private void OnDrawGizmos()
