@@ -6,8 +6,11 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {   
     [SerializeField] private float bulletSpeed;
-    [SerializeField] private int bulletDamage;
     [SerializeField] private Rigidbody2D bulletRb;
+
+    private int bulletDamage;
+    private float bulletRange;
+    private Vector3 startPosition;
 
     void Start()
     {
@@ -31,5 +34,21 @@ public class BulletScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void Update()
+    {
+        if(Vector3.Distance(startPosition, transform.position) >= bulletRange)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void Setup(int newDamage, float newRange)
+    {
+        bulletDamage = newDamage;
+        bulletRange = newRange;
+
+        startPosition = transform.position;
     }
 }

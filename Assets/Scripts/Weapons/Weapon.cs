@@ -6,9 +6,10 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
 
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private BulletScript bulletPrefab;
     [SerializeField] private Transform bulletTransform;
-    [SerializeField] private float timeBetweenFiring;
+
+    [SerializeField] private WeaponsSO typeOfWeapon;
 
     private float timer;
 
@@ -35,7 +36,7 @@ public class Weapon : MonoBehaviour
         if(timer <= 0f)
         {
             Shoot();
-            timer = timeBetweenFiring;
+            timer = typeOfWeapon.rateOfFire;
             return true;
         }
         return false;
@@ -43,8 +44,9 @@ public class Weapon : MonoBehaviour
 
     // instantie une nouvelle balle
     public void Shoot()
-    {
-        Instantiate(bulletPrefab, bulletTransform.position, bulletTransform.rotation);
+    {   
+        BulletScript newBullet = Instantiate(bulletPrefab, bulletTransform.position, bulletTransform.rotation);
+        newBullet.Setup(typeOfWeapon.weaponDamage,typeOfWeapon.weaponRange);
     }
 
 }

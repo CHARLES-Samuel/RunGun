@@ -235,7 +235,11 @@ PrefabInstance:
     - target: {fileID: 1596327210477759117, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 6730715633410160250, guid: 678f243df34b7c1ee8e64e2999d36a1d, type: 3}
+      objectReference: {fileID: 1572878557619520470, guid: 678f243df34b7c1ee8e64e2999d36a1d, type: 3}
+    - target: {fileID: 1596327210477759117, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
+      propertyPath: typeOfWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 8bbf9c1fd81c420b1888ec1f92bb7577, type: 2}
     - target: {fileID: 6766267409083217122, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
       propertyPath: m_Name
       value: Weapon
