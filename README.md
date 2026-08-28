@@ -9,7 +9,7 @@ L'objectif de ce projet est de me lancer pour de bon dans la création de jeux v
 
 ## 🛠️ Ce qu'on y trouve pour l'instant
 ### v0.1 - Prototype de test de la mécanique principale
-*(Pour plus d'infos, je vous renvoie vers la release : [v0.1](Mettre_le_lien_ici) )*
+*(Pour plus d'infos, je vous renvoie vers la release : [v0.1](https://github.com/CHARLES-Samuel/RunGun/releases#release-v0.1) )*
 * Déplacement du joueur automatique (auto-runner)
 * Système de saut fluide (j'essaie d'améliorer au plus le game feel)
 * Système de vie
@@ -19,7 +19,7 @@ L'objectif de ce projet est de me lancer pour de bon dans la création de jeux v
 * Punition du joueur s'il reste bloqué
 
 ## 🎮 Comment jouer (Tester le prototype)
-1. Accédez aux téléchargements : [Télécharger la dernière Release](Mettre_le_lien_ici)
+1. Accédez aux téléchargements : [Télécharger la dernière Release](https://github.com/CHARLES-Samuel/RunGun/releases#release-v0.1)
 2. Téléchargez le fichier `.zip` correspondant à votre système (Windows ou Linux) dans la section **Assets**.
 3. **Faites un clic-droit sur le fichier et choisissez "Extraire tout"** pour décompresser le dossier complet.
 
@@ -38,5 +38,12 @@ L'objectif de ce projet est de me lancer pour de bon dans la création de jeux v
 * Mise en place d'une structuration solide des armes, des pièges et des ennemis pour le futur.
 * Ajouter une vraie navigation de jeu entre les menus.
 
+## 🔮 Ma vision pour le futur du jeu
+Ce prototype n'est que le début. Voici la direction que j'aimerais prendre pour transformer cette mécanique de base en un jeu complet :
+
+* **Progression et Améliorations :** Les ennemis auront des barres de vie et deviendront de plus en plus forts au fil des niveaux. Pour y faire face, il faudra récolter des pièces permettant d'améliorer ses armes (dégâts, capacité du chargeur, portée, ou même le type de munitions).
+* **Mode Infini :** En plus des niveaux classiques, j'aimerais créer un mode "Endless" où le but sera de survivre et d'aller le plus loin possible.
+* **Objets Bonus (Power-ups) :** L'ajout de bonus temporaires à ramasser en cours de partie pour se sortir des situations difficiles et booster ses statistiques.
+* **Le mot de la fin :** J'ai encore des dizaines d'autres idées en tête ! Je n'ai peut-être pas encore toutes les compétences techniques pour les réaliser aujourd'hui, mais c'est **exactement** le but de ce projet : apprendre en pratiquant et repousser mes limites.
 ---
 *Dans le but de devenir meilleur*
