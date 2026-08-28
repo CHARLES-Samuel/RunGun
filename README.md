@@ -8,12 +8,35 @@ L'objectif de ce projet est de me lancer pour de bon dans la création de jeux v
 Étant donné que c'est une grande première pour moi, ce dépôt va évoluer au fil de mes apprentissages, de mes tests et de mes réussites (et de quelques bugs, sûrement !).
 
 ## 🛠️ Ce qu'on y trouve pour l'instant
-* Un prototype en cours de construction axé sur le gameplay de base.
-* Une structure de projet propre configurée pour Git (avec un gros travail de nettoyage pour ne garder que l'essentiel).
+### v0.1 - Prototype de test de la mécanique principale
+*(Pour plus d'infos, je vous renvoie vers la release : [v0.1](Mettre_le_lien_ici) )*
+* Déplacement du joueur automatique (auto-runner)
+* Système de saut fluide (j'essaie d'améliorer au plus le game feel)
+* Système de vie
+* Arme basique tirant des balles
+* Ennemi simple qui nous tire dessus
+* Piège infligeant des dégâts
+* Punition du joueur s'il reste bloqué
+
+## 🎮 Comment jouer (Tester le prototype)
+1. Accédez aux téléchargements : [Télécharger la dernière Release](Mettre_le_lien_ici)
+2. Téléchargez le fichier `.zip` correspondant à votre système (Windows ou Linux) dans la section **Assets**.
+3. **Faites un clic-droit sur le fichier et choisissez "Extraire tout"** pour décompresser le dossier complet.
+
+**🪟 Pour les joueurs Windows :**
+* Ouvrez le dossier extrait et double-cliquez sur l'exécutable (`RunnerMobile.exe`).
+* *Note : Si Windows Defender affiche un écran bleu de protection, cliquez sur "Informations complémentaires" puis sur "Exécuter quand même".*
+
+**🐧 Pour les joueurs Linux :**
+* Ouvrez le dossier extrait et double-cliquez sur le fichier (`v0.1.x86_64`). Si le jeu ne veut pas se lancer directement, il faut lui donner les droits d'exécution.
+* Faites un *Clic-droit > Propriétés > Autoriser l'exécution comme un programme*.
+* *(Alternative terminal : ouvrez un terminal dans le dossier et tapez `chmod +x v0.1.x86_64`)*.
+* Lancez ensuite le fichier exécutable !
 
 ## 🚀 Prochaines étapes
-* Affiner la mécanique principale.
-* Commencer à structurer de vrais niveaux de test.
+* Affiner la mécanique principale et le game feel.
+* Mise en place d'une structuration solide des armes, des pièges et des ennemis pour le futur.
+* Ajouter une vraie navigation de jeu entre les menus.
 
 ---
-*Dans le but de devenur meilleur*
+*Dans le but de devenir meilleur*
