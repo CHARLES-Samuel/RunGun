@@ -7,14 +7,14 @@ using System.Collections;
 */
 public class Weapon : MonoBehaviour
 {
+    public WeaponsSO typeOfWeapon;
 
     [SerializeField] private BulletScript bulletPrefab;
     [SerializeField] private Transform bulletTransform;
-    [SerializeField] private WeaponsSO typeOfWeapon;
     [SerializeField] private float reloadTime;
 
     private float timer;
-    [SerializeField] private int currentMunition;
+    private int currentMunition;
     private bool haveMunition;
 
     void Start()

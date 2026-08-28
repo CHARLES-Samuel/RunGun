@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Smg
   m_EditorClassIdentifier: Assembly-CSharp::WeaponsSO
   weaponName: SubmachineGun
-  weaponRange: 10
-  weaponDamage: 10
+  weaponRange: 15
+  weaponDamage: 5
   chargerSize: 25
-  rateOfFire: 0.5
+  rateOfFire: 0.2

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AssaultRifle
   m_EditorClassIdentifier: Assembly-CSharp::WeaponsSO
   weaponName: AssaultRifle
-  weaponRange: 15
+  weaponRange: 30
   weaponDamage: 15
   chargerSize: 40
-  rateOfFire: 0.8
+  rateOfFire: 0.3

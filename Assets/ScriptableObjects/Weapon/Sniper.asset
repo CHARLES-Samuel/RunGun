@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sniper
   m_EditorClassIdentifier: Assembly-CSharp::WeaponsSO
   weaponName: Sniper
-  weaponRange: 25
+  weaponRange: 50
   weaponDamage: 40
   chargerSize: 10
   rateOfFire: 2

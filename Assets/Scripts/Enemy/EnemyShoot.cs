@@ -1,4 +1,5 @@
 using System.Runtime.Serialization.Formatters;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /**
@@ -7,8 +8,13 @@ using UnityEngine;
 public class EnemyShoot : MonoBehaviour
 {
     [SerializeField] private Weapon currentWeapon;
-    [SerializeField] private Transform target;
-    [SerializeField] private float detectionRange;
+    
+    private Transform target;
+
+    void Awake()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     void Update()
     {   
@@ -17,7 +23,7 @@ public class EnemyShoot : MonoBehaviour
             return;
         }
 
-        if (Vector2.Distance(transform.position, target.position) <= detectionRange)
+        if (Vector2.Distance(transform.position, target.position) <= currentWeapon.typeOfWeapon.weaponRange)
         {
             EnemyShooting();
         }        
@@ -32,7 +38,10 @@ public class EnemyShoot : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position,detectionRange);
+        if (currentWeapon != null && currentWeapon.typeOfWeapon != null)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, currentWeapon.typeOfWeapon.weaponRange);
+        }
     }
 }
