@@ -59,9 +59,17 @@ public class Weapon : MonoBehaviour
 
     // instantie une nouvelle balle
     private void Shoot()
-    {   
-        BulletScript newBullet = Instantiate(bulletPrefab, bulletTransform.position, bulletTransform.rotation);
-        newBullet.Setup(typeOfWeapon.weaponDamage,typeOfWeapon.weaponRange);
+    {   //            si le nombre de balle est superieur a 0                       sinon on prend 1
+        int nbBullet = (typeOfWeapon.bulletCount > 0) ? typeOfWeapon.bulletCount : 1;
+
+        for (int i = 0; i < nbBullet; i++)
+        {
+            float randomSpread = UnityEngine.Random.Range(-typeOfWeapon.spreadAngle, typeOfWeapon.spreadAngle);   
+            Quaternion spreadRotation = bulletTransform.rotation * Quaternion.Euler(0, 0, randomSpread);
+            BulletScript newBullet = Instantiate(bulletPrefab, bulletTransform.position, spreadRotation);
+            newBullet.Setup(typeOfWeapon.weaponDamage, typeOfWeapon.weaponRange);
+        }
+
         currentMunition--;
         OnAmmoChanged?.Invoke(); // ? verifie que qlq ecoute l'event, si oui il envoie le message a toute les personnes qui ecoutent
 

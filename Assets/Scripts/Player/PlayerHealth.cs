@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
     // Mort du personnage
     public void Die()
     {
-        GameManager.instance.StartGame();
+        GameManager.instance.Respawn();
     }
 
     // Fait "clignoter" le personnage pour voir qu'il est invincible

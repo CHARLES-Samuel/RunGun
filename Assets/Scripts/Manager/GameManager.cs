@@ -25,6 +25,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadSceneAsync(1);
     }
 
+    public void Respawn()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     // Revenir au menu principal
     public void FinishGame()
     {

@@ -9,4 +9,6 @@ public class WeaponsSO : ScriptableObject
     public int weaponDamage;
     public int chargerSize;
     public float rateOfFire;
+    public int bulletCount;
+    public float spreadAngle;
 }

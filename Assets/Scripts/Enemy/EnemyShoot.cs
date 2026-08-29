@@ -16,6 +16,11 @@ public class EnemyShoot : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
+    void Start()
+    {
+        currentWeapon.InitializeWeapon();
+    }
+
     void Update()
     {   
         if (currentWeapon == null)

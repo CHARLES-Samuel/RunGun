@@ -18,3 +18,5 @@ MonoBehaviour:
   weaponDamage: 15
   chargerSize: 40
   rateOfFire: 0.3
+  bulletCount: 1
+  spreadAngle: 0
