@@ -18,13 +18,6 @@ public class Weapon : MonoBehaviour
     private float timer;
     private bool haveMunition;
 
-    void Awake()
-    {
-        currentMunition = typeOfWeapon.chargerSize;
-        haveMunition = true;
-        
-    }
-
     void Update()
     {
         if (timer > 0f)
@@ -52,6 +45,16 @@ public class Weapon : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void InitializeWeapon()
+    {
+        if (typeOfWeapon != null)
+        {
+            currentMunition = typeOfWeapon.chargerSize;
+            haveMunition = true;
+            OnAmmoChanged?.Invoke();
+        }
     }
 
     // instantie une nouvelle balle
