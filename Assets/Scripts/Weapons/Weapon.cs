@@ -8,13 +8,13 @@ using System.Collections;
 public class Weapon : MonoBehaviour
 {
     public WeaponsSO typeOfWeapon;
+    public int currentMunition;
 
     [SerializeField] private BulletScript bulletPrefab;
     [SerializeField] private Transform bulletTransform;
     [SerializeField] private float reloadTime;
 
     private float timer;
-    private int currentMunition;
     private bool haveMunition;
 
     void Start()

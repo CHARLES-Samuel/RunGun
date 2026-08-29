@@ -338,13 +338,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1596327210477759117, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
+      propertyPath: reloadTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596327210477759117, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 1572878557619520470, guid: f5bffe394febba353b2390a7df25a939, type: 3}
     - target: {fileID: 1596327210477759117, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
       propertyPath: typeOfWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 8bbf9c1fd81c420b1888ec1f92bb7577, type: 2}
+      objectReference: {fileID: 11400000, guid: f91dabb2414a3ca2a8e5339f1f611177, type: 2}
     - target: {fileID: 1596327210477759117, guid: c047e0f6571ddc77eb3b71ea75bb3a6b, type: 3}
       propertyPath: timeBetweenFiring
       value: 0.3
