@@ -17,21 +17,21 @@ public class BulletScript : MonoBehaviour
         bulletRb.linearVelocity = transform.right * bulletSpeed;
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {   
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            EnemyHealth enemyHealthScript = collision.GetComponent<EnemyHealth>();
+            EnemyHealth enemyHealthScript = collision.gameObject.GetComponent<EnemyHealth>();
             enemyHealthScript.TakeDamage(bulletDamage);
             Destroy(gameObject);
         }
-        else if (collision.CompareTag("Player"))
+        else if (collision.gameObject.CompareTag("Player"))
         {   
-            PlayerHealth playerHealthScript = collision.GetComponent<PlayerHealth>();
+            PlayerHealth playerHealthScript = collision.gameObject.GetComponent<PlayerHealth>();
             playerHealthScript.TakeDamage(bulletDamage);
             Destroy(gameObject);
         }
-        else if (collision.CompareTag("Ground"))
+        else if (collision.gameObject.CompareTag("Ground"))
         {
             Destroy(gameObject);
         }
