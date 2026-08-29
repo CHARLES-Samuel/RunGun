@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
+using System;
 
 /**
     Gere le fonctionnement d'une arme
@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
 {
     public WeaponsSO typeOfWeapon;
     public int currentMunition;
+    public event Action OnAmmoChanged;
 
     [SerializeField] private BulletScript bulletPrefab;
     [SerializeField] private Transform bulletTransform;
@@ -17,10 +18,11 @@ public class Weapon : MonoBehaviour
     private float timer;
     private bool haveMunition;
 
-    void Start()
+    void Awake()
     {
         currentMunition = typeOfWeapon.chargerSize;
         haveMunition = true;
+        
     }
 
     void Update()
@@ -58,6 +60,7 @@ public class Weapon : MonoBehaviour
         BulletScript newBullet = Instantiate(bulletPrefab, bulletTransform.position, bulletTransform.rotation);
         newBullet.Setup(typeOfWeapon.weaponDamage,typeOfWeapon.weaponRange);
         currentMunition--;
+        OnAmmoChanged?.Invoke(); // ? verifie que qlq ecoute l'event, si oui il envoie le message a toute les personnes qui ecoutent
 
         if (currentMunition <= 0)
         {   
@@ -70,6 +73,7 @@ public class Weapon : MonoBehaviour
     {
         yield return new WaitForSeconds(reloadTime);
         currentMunition = typeOfWeapon.chargerSize;
+        OnAmmoChanged?.Invoke();
         haveMunition = true;
     }
 }
