@@ -211,6 +211,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   currentWeapon: {fileID: 8120881113125083073}
+  allWeaponsCatalogue:
+  - {fileID: 11400000, guid: f91dabb2414a3ca2a8e5339f1f611177, type: 2}
+  - {fileID: 11400000, guid: 3f63c6dccd6e6fc83a801bf110d1d89b, type: 2}
+  - {fileID: 11400000, guid: 8bbf9c1fd81c420b1888ec1f92bb7577, type: 2}
+  - {fileID: 11400000, guid: 5418ef604b0a950af8a0f740b5856327, type: 2}
 --- !u!114 &8320616831918160415
 MonoBehaviour:
   m_ObjectHideFlags: 0

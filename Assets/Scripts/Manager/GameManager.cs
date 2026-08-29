@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
         if(instance != null)
         {
             Debug.LogWarning("Il y a plus d'une instance de GameManager dans la scène");
+            Destroy(gameObject);
             return;
         }
         instance = this;

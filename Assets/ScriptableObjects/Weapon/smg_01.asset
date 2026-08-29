@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a34277186a0304cb9be5ca3e4d208e0, type: 3}
-  m_Name: Shotgun
+  m_Name: smg_01
   m_EditorClassIdentifier: Assembly-CSharp::WeaponsSO
-  weaponName: Shotgun
-  weaponRange: 10
-  weaponDamage: 40
-  chargerSize: 10
-  rateOfFire: 1.5
+  ID: smg_01
+  weaponName: SubmachineGun
+  weaponRange: 15
+  weaponDamage: 5
+  chargerSize: 25
+  rateOfFire: 0.2

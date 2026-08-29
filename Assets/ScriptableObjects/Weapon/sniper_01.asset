@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a34277186a0304cb9be5ca3e4d208e0, type: 3}
-  m_Name: AssaultRifle
+  m_Name: sniper_01
   m_EditorClassIdentifier: Assembly-CSharp::WeaponsSO
-  weaponName: AssaultRifle
-  weaponRange: 30
-  weaponDamage: 15
-  chargerSize: 40
-  rateOfFire: 0.3
+  ID: sniper_01
+  weaponName: Sniper
+  weaponRange: 50
+  weaponDamage: 40
+  chargerSize: 10
+  rateOfFire: 2
