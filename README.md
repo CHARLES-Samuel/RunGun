@@ -8,7 +8,7 @@ L'objectif de ce projet est de me lancer pour de bon dans la création de jeux v
 Étant donné que c'est une grande première pour moi, ce dépôt va évoluer au fil de mes apprentissages, de mes tests et de mes réussites (et de quelques bugs, sûrement !).
 
 ## 🛠️ Ce qu'on y trouve pour l'instant
-### v0.1 - Prototype de test de la mécanique principale
+### v0.1 - Prototype de test de la mécanique principale (Fini)
 *(Pour plus d'infos, je vous renvoie vers la release : [v0.1](https://github.com/CHARLES-Samuel/RunGun/releases#release-v0.1) )*
 * Déplacement du joueur automatique (auto-runner)
 * Système de saut fluide (j'essaie d'améliorer au plus le game feel)
@@ -17,6 +17,11 @@ L'objectif de ce projet est de me lancer pour de bon dans la création de jeux v
 * Ennemi simple qui nous tire dessus
 * Piège infligeant des dégâts
 * Punition du joueur s'il reste bloqué
+
+### v0.2 - Construction d'une base solide pour le futur (En cours)
+* Type D'arme (smg, assault rifle, shotgun, sniper)
+* Changement de ce type d'arme dans le menu
+* Vie des ennemies
 
 ## 🎮 Comment jouer (Tester le prototype)
 1. Accédez aux téléchargements : [Télécharger la dernière Release](https://github.com/CHARLES-Samuel/RunGun/releases#release-v0.1)
