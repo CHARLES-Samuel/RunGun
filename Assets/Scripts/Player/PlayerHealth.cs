@@ -53,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Mort du personnage
-    private void Die()
+    public void Die()
     {
         GameManager.instance.StartGame();
     }
