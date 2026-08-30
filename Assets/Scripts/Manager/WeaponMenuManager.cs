@@ -12,7 +12,7 @@ public class WeaponMenuManager : MonoBehaviour
 
     void Start()
     {
-        string savedWeaponId = SaveManager.instance.playerData.EquipedWeaponID;
+        string savedWeaponId = SaveManager.instance.playerData.equipedWeaponID;
 
         foreach (Button btn in buttonsList)
         {
@@ -37,7 +37,7 @@ public class WeaponMenuManager : MonoBehaviour
         clickedButton.image.color = Color.lightBlue;
 
         string weaponID = clickedButton.name;
-        SaveManager.instance.playerData.EquipedWeaponID = weaponID;
+        SaveManager.instance.playerData.equipedWeaponID = weaponID;
         SaveManager.instance.SaveToJson();
     }
 }

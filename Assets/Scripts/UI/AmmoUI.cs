@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class CurrentMunition : MonoBehaviour
+public class AmmoUI : MonoBehaviour
 {   
     [SerializeField] private Weapon playerWeapon;
 
@@ -23,7 +23,7 @@ public class CurrentMunition : MonoBehaviour
 
     void OnDestroy()
     {
-        // Bonne pratique : on se désabonne si l'UI est détruite pour éviter les bugs mémoire
+        // on se désabonne si l'UI est détruite pour éviter les bugs mémoire
         if (playerWeapon != null)
         {
             playerWeapon.OnAmmoChanged -= RefreshDisplay;

@@ -14,7 +14,7 @@ public class PlayerShoot : MonoBehaviour
     void Start()
     {
         mainCam = Camera.main; 
-        string saveWeaponId = SaveManager.instance.playerData.EquipedWeaponID;
+        string saveWeaponId = SaveManager.instance.playerData.equipedWeaponID;
 
         foreach (WeaponsSO weaponsSO in allWeaponsCatalogue)
         {

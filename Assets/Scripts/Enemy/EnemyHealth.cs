@@ -4,6 +4,7 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
     [SerializeField] private Transform enemyHealthBar;
+    [SerializeField] private int rewardValue;
 
     private int currenHealth;
 
@@ -24,7 +25,8 @@ public class EnemyHealth : MonoBehaviour
     }
 
     private void Die()
-    {
+    {   
+        PlayerInventory.instance.ModifyCoins(rewardValue);
         Destroy(gameObject);
     }
 

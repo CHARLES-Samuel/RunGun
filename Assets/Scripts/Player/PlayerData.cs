@@ -1,5 +1,6 @@
 [System.Serializable]
 public class PlayerData
 {
-    public string EquipedWeaponID = "smg_01";
+    public string equipedWeaponID = "smg_01";
+    public int coins;
 }

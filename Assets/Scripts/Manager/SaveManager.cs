@@ -23,7 +23,9 @@ public class SaveManager : MonoBehaviour
     }
 
     public void SaveToJson()
-    {
+    {   
+        playerData.coins = PlayerInventory.instance.currentCoins;
+
         string data = JsonUtility.ToJson(playerData);
         Debug.Log(filePath);
         File.WriteAllText(filePath, data);
@@ -36,6 +38,7 @@ public class SaveManager : MonoBehaviour
         {
             string data = File.ReadAllText(filePath);
             playerData = JsonUtility.FromJson<PlayerData>(data);
+            PlayerInventory.instance.currentCoins = playerData.coins;
             Debug.Log("Chargement effectue");
         }
         else

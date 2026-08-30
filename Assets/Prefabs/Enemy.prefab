@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   maxHealth: 20
   enemyHealthBar: {fileID: 2764744452411003264}
+  rewardValue: 5
 --- !u!1 &3471840086960338207
 GameObject:
   m_ObjectHideFlags: 0
