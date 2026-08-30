@@ -19,9 +19,15 @@ L'objectif de ce projet est de me lancer pour de bon dans la création de jeux v
 * Punition du joueur s'il reste bloqué
 
 ### v0.2 - Construction d'une base solide pour le futur (En cours)
-* Type D'arme (smg, assault rifle, shotgun, sniper)
-* Changement de ce type d'arme dans le menu
-* Vie des ennemies
+* Intégration des différents types d'armes (SMG, Assault Rifle, Shotgun, Sniper).
+* Ajout d'un système de points de vie pour les ennemis.
+* Implémentation du système de pièces (ramassage en jeu).
+* Création d'une interface de boutique dans le menu principal.
+* Déblocage et achat des armes via l'argent récolté en jeu.
+* Système de sélection et d'équipement de l'arme directement depuis le menu.
+* L'inventaire, les pièces en banque et l'arme équipée sont désormais sauvegardés de manière permanente.
+* Refonte des interfaces (Boutique, Compteurs de pièces) avec un système d'Événements (`Action`)
+* Le menu lit dynamiquement les prix et les informations depuis un catalogue de `ScriptableObjects`, facilitant l'ajout futur de nouveau contenu.
 
 ## 🎮 Comment jouer (Tester le prototype)
 1. Accédez aux téléchargements : [Télécharger la dernière Release](https://github.com/CHARLES-Samuel/RunGun/releases#release-v0.1)
