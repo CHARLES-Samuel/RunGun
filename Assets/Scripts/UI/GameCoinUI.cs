@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class CoinsUI : MonoBehaviour
+public class GameCoinUI : MonoBehaviour
 {       
     private TextMeshProUGUI nbOfCoinsUI;
 
@@ -16,6 +16,7 @@ public class CoinsUI : MonoBehaviour
 
         // on "s'abonne" a l'event de weapon, on va detecter a chaque fois qu'il nous envoie un message
         // on lance le refresh quand on le receptionne
+        RefreshDisplay();
         PlayerInventory.instance.OnCoinsChanged += RefreshDisplay; 
     }
 

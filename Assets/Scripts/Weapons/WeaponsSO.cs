@@ -11,4 +11,5 @@ public class WeaponsSO : ScriptableObject
     public float rateOfFire;
     public int bulletCount;
     public float spreadAngle;
+    public int price;
 }

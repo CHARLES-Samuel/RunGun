@@ -55,7 +55,6 @@ public class PlayerHealth : MonoBehaviour
     // Mort du personnage
     public void Die()
     {   
-        SaveManager.instance.SaveToJson();
         GameManager.instance.Respawn();
     }
 

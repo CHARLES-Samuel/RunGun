@@ -1,8 +1,13 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class WeaponMenuManager : MonoBehaviour
-{
+{   
+    public event Action<Button> OnBtnChanged;
+    public Button currentButton;
+
+    [SerializeField] private ShopManager buyButton;
     private Button[] buttonsList;
 
     void Awake()
@@ -18,26 +23,36 @@ public class WeaponMenuManager : MonoBehaviour
         {
             if (btn.gameObject.name == savedWeaponId)
             {
-                btn.image.color = Color.lightBlue;
+                btn.image.color = Color.cyan;
+                currentButton = btn;
             }
             else
             {
                 btn.image.color = Color.white;
             }
         }
+
+        if (currentButton != null)
+        {
+            OnButtonClick(currentButton);
+        }
     }
 
     public void OnButtonClick(Button clickedButton)
+    {   
+        ChangeColorOfWeaponSelected(clickedButton);
+        currentButton = clickedButton;
+        buyButton.forBuy = !SaveManager.instance.playerData.HasWeapon(clickedButton.gameObject.name);
+        OnBtnChanged?.Invoke(clickedButton);
+    }
+
+    private void ChangeColorOfWeaponSelected(Button clickedButton)
     {
         foreach (Button button in buttonsList)
         {
             button.image.color = Color.white;
         }
 
-        clickedButton.image.color = Color.lightBlue;
-
-        string weaponID = clickedButton.name;
-        SaveManager.instance.playerData.equipedWeaponID = weaponID;
-        SaveManager.instance.SaveToJson();
+        clickedButton.image.color = Color.cyan;
     }
 }

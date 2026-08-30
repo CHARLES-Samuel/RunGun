@@ -1,9 +1,12 @@
+using System;
 using System.IO;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour
 {
     public PlayerData playerData = new PlayerData();
+    public event Action OnBankCoinsChanged;
+
     public static SaveManager instance;
 
     private string filePath;
@@ -24,8 +27,6 @@ public class SaveManager : MonoBehaviour
 
     public void SaveToJson()
     {   
-        playerData.coins = PlayerInventory.instance.currentCoins;
-
         string data = JsonUtility.ToJson(playerData);
         Debug.Log(filePath);
         File.WriteAllText(filePath, data);
@@ -38,7 +39,7 @@ public class SaveManager : MonoBehaviour
         {
             string data = File.ReadAllText(filePath);
             playerData = JsonUtility.FromJson<PlayerData>(data);
-            PlayerInventory.instance.currentCoins = playerData.coins;
+            
             Debug.Log("Chargement effectue");
         }
         else
@@ -46,5 +47,12 @@ public class SaveManager : MonoBehaviour
             Debug.Log("Aucune sauvegarde trouve");
             playerData = new PlayerData();
         }
+    }
+
+    public void AddCoinsToBank(int amount)
+    {
+        playerData.ModifyCoins(amount); 
+        OnBankCoinsChanged?.Invoke(); 
+        SaveToJson(); 
     }
 }

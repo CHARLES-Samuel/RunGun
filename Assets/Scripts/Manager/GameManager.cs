@@ -22,17 +22,19 @@ public class GameManager : MonoBehaviour
     // Demarre le jeu
     public void StartGame()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2);
     }
 
     public void Respawn()
-    {
+    {   
+        SaveManager.instance.AddCoinsToBank(PlayerInventory.instance.currentCoins);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     // Revenir au menu principal
     public void FinishGame()
-    {
+    {   
+        SaveManager.instance.AddCoinsToBank(PlayerInventory.instance.currentCoins);
         SceneManager.LoadSceneAsync(0);
     }
 }

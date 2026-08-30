@@ -1,9 +1,11 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public int currentCoins;
+    public int currentCoins = 0;
+
     public event Action OnCoinsChanged;
 
     public static PlayerInventory instance;

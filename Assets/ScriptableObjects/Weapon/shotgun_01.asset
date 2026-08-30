@@ -20,3 +20,4 @@ MonoBehaviour:
   rateOfFire: 1.5
   bulletCount: 6
   spreadAngle: 15
+  price: 10
