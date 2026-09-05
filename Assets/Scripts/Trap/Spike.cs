@@ -11,7 +11,6 @@ public class Spike : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {   
-            Debug.Log("degat de spike");
             PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {

@@ -30,7 +30,6 @@ public class SaveManager : MonoBehaviour
         string data = JsonUtility.ToJson(playerData);
         Debug.Log(filePath);
         File.WriteAllText(filePath, data);
-        Debug.Log("Sauvegarde effectuee");
     }
 
     public void LoadFromJson()
@@ -40,7 +39,6 @@ public class SaveManager : MonoBehaviour
             string data = File.ReadAllText(filePath);
             playerData = JsonUtility.FromJson<PlayerData>(data);
             
-            Debug.Log("Chargement effectue");
         }
         else
         {

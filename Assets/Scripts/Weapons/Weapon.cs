@@ -17,6 +17,12 @@ public class Weapon : MonoBehaviour
 
     private float timer;
     private bool haveMunition;
+    private WaitForSeconds wait;
+
+    void Awake()
+    {
+        wait = new WaitForSeconds(reloadTime);
+    }
 
     void Update()
     {
@@ -82,7 +88,7 @@ public class Weapon : MonoBehaviour
 
     public IEnumerator HandleReloadDelay()
     {
-        yield return new WaitForSeconds(reloadTime);
+        yield return wait;
         currentMunition = typeOfWeapon.chargerSize;
         OnAmmoChanged?.Invoke();
         haveMunition = true;

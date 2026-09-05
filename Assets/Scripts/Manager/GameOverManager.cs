@@ -14,7 +14,6 @@ public class GameOverManager : MonoBehaviour
     public void Respawn()
     {   
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        playerHealth.Respawn();
         gameOverUI.SetActive(false);
     }
 

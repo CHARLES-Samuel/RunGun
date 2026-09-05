@@ -71,25 +71,16 @@ public class PlayerHealth : MonoBehaviour
         gameOverManager.OnPlayerDeath();
     }
 
-    public void Respawn()
-    {
-        // bloquer les mouvements du perso
-        playerMovement.enabled = true;
-        // empecher les interactions physique avec les autres elements de la scene
-        playerMovement.rb.bodyType = RigidbodyType2D.Dynamic;
-        currentHealth = maxHealth;
-        healthBar.SetHealthUI(currentHealth);
-    }
-
     // Fait "clignoter" le personnage pour voir qu'il est invincible
     public IEnumerator InvicibilityFlash()
-    {
+    {   
+        WaitForSeconds wait = new WaitForSeconds(invicibilityFlashDelay);
         while (isInvicible)
         {
             graphics.color = new Color(1f,1f,1f,0f);
-            yield return new WaitForSeconds(invicibilityFlashDelay);
+            yield return wait;
             graphics.color = new Color(1f,1f,1f,1f);
-            yield return new WaitForSeconds(invicibilityFlashDelay);
+            yield return wait;
         }
     }
 
