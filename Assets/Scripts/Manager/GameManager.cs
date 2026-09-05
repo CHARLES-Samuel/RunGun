@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {   
     public static GameManager instance;
 
+    [SerializeField] private GameObject weaponMenu;
+
     void Awake()
     {   
         if(instance != null)
@@ -36,5 +38,20 @@ public class GameManager : MonoBehaviour
     {   
         SaveManager.instance.AddCoinsToBank(PlayerInventory.instance.currentCoins);
         SceneManager.LoadSceneAsync(0);
+    }
+
+    public void OpenWeaponMenu()
+    {
+        weaponMenu.SetActive(true);
+    }
+
+    public void CloseWeaponMenu()
+    {
+        weaponMenu.SetActive(false);
+    }
+
+    public void QuitGameBtn()
+    {
+        Application.Quit();
     }
 }

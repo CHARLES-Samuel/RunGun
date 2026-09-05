@@ -15,7 +15,7 @@ public class WeaponMenuManager : MonoBehaviour
         buttonsList = gameObject.GetComponentsInChildren<Button>();
     }
 
-    void Start()
+    void OnEnable()
     {
         string savedWeaponId = SaveManager.instance.playerData.equipedWeaponID;
 
@@ -23,8 +23,8 @@ public class WeaponMenuManager : MonoBehaviour
         {
             if (btn.gameObject.name == savedWeaponId)
             {
-                btn.image.color = Color.cyan;
-                currentButton = btn;
+                btn.image.color = Color.cyan; 
+                currentButton = btn; 
             }
             else
             {
@@ -55,4 +55,5 @@ public class WeaponMenuManager : MonoBehaviour
 
         clickedButton.image.color = Color.cyan;
     }
+
 }

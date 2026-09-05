@@ -9,18 +9,25 @@ public class ShopManager : MonoBehaviour
 
     public bool forBuy;
     private TextMeshProUGUI buttonText;
+    private Button backgroundBuyBtn;
 
     void Awake()
     {
         buttonText = GetComponentInChildren<TextMeshProUGUI>();
+        backgroundBuyBtn = GetComponentInChildren<Button>();
     }
 
-    void Start()
+    void OnEnable()
     {
         weaponMenuManager.OnBtnChanged += RefreshDisplay; 
+        
+        if (weaponMenuManager.currentButton != null)
+        {
+            RefreshDisplay(weaponMenuManager.currentButton);
+        }
     }
 
-    void OnDestroy()
+    void OnDisable()
     {
         weaponMenuManager.OnBtnChanged -= RefreshDisplay;
     }
@@ -39,10 +46,22 @@ public class ShopManager : MonoBehaviour
         if (forBuy)
         {
             buttonText.text = GetWeaponPrice(clickedButton.name).ToString();
+            backgroundBuyBtn.image.color = Color.white;
         }
         else
-        {
-            buttonText.text = "Equip";
+        {   
+            string currentWeaponID = SaveManager.instance.playerData.equipedWeaponID;
+            
+            if (weaponMenuManager.currentButton.name == currentWeaponID)
+            {
+                backgroundBuyBtn.image.color = Color.green;
+                buttonText.text = "Equipped";
+            }
+            else
+            {
+                backgroundBuyBtn.image.color = Color.white;
+                buttonText.text = "Equip";
+            }
         }
     }
 
@@ -58,6 +77,7 @@ public class ShopManager : MonoBehaviour
             SaveManager.instance.playerData.equipedWeaponID = weaponID;
             SaveManager.instance.SaveToJson();
         }
+        RefreshDisplay(weaponMenuManager.currentButton);
     }
 
     private void TryToBuy(string weaponID)
@@ -68,6 +88,7 @@ public class ShopManager : MonoBehaviour
         {
             SaveManager.instance.AddCoinsToBank(-priceOfWeapon); 
             SaveManager.instance.playerData.UnlockWeapon(weaponID);
+            SaveManager.instance.playerData.equipedWeaponID = weaponID;
             SaveManager.instance.SaveToJson();
             
             forBuy = false;
