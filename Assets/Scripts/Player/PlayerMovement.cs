@@ -5,8 +5,9 @@ using UnityEngine;
 */
 public class PlayerMovement : MonoBehaviour
 {   
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public bool isGrounded;
+    public Collider2D playerCollider;
     private bool jumpRequested;
     private PlayerHealth playerHealth;
 
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         playerHealth = gameObject.GetComponent<PlayerHealth>();
+        playerCollider = gameObject.GetComponent<Collider2D>();
     }
 
     void Update()

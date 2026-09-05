@@ -14,14 +14,14 @@ public class HealthBar : MonoBehaviour
     }
 
     // Initialise la valeur max de la barre de vie
-    public void setMaxHealthUI(int health)
+    public void SetMaxHealthUI(int health)
     {
         slider.maxValue = health;
         slider.value = health;
     }
 
     // Mets a jour la barre de vie
-    public void setHealthUI(int health)
+    public void SetHealthUI(int health)
     {
         slider.value = health;
     }

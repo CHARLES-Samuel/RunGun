@@ -7,9 +7,11 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
-    [SerializeField] private int currenHealth;
+    [SerializeField] private int currentHealth;
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private GameOverManager gameOverManager;
 
+    private PlayerMovement playerMovement;
     private bool isInvicible;
     private float invicibilityFlashDelay = 0.1f;
     private float invicibilityTimeAfterHit = 1.5f;
@@ -18,25 +20,26 @@ public class PlayerHealth : MonoBehaviour
     void Awake()
     {
         graphics = gameObject.GetComponent<SpriteRenderer>();
+        playerMovement = gameObject.GetComponent<PlayerMovement>();
     }
 
     void Start()
     {
-        currenHealth = maxHealth;
-        healthBar.setMaxHealthUI(maxHealth);
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealthUI(maxHealth);
     }
 
     // Enleve de la vie au personnage
     public void TakeDamage(int damage)
     {
-        currenHealth -= damage;
+        currentHealth -= damage;
         
-        if (currenHealth <= 0)
+        if (currentHealth <= 0)
         {   
             Die();
         }
 
-        healthBar.setHealthUI(currenHealth);
+        healthBar.SetHealthUI(currentHealth);
     }
 
     // Enleve de la vie au personnage lorsque cela vient d'un spike
@@ -55,7 +58,27 @@ public class PlayerHealth : MonoBehaviour
     // Mort du personnage
     public void Die()
     {   
-        GameManager.instance.Respawn();
+        SaveManager.instance.AddCoinsToBank(PlayerInventory.instance.currentCoins);
+
+        // arrete le deplacement en cours
+        playerMovement.rb.linearVelocity = Vector3.zero;
+        // bloquer les mouvements du perso
+        playerMovement.enabled = false;
+        // empecher les interactions physique avec les autres elements de la scene
+        playerMovement.rb.bodyType = RigidbodyType2D.Kinematic;
+        playerMovement.playerCollider.enabled = false;
+
+        gameOverManager.OnPlayerDeath();
+    }
+
+    public void Respawn()
+    {
+        // bloquer les mouvements du perso
+        playerMovement.enabled = true;
+        // empecher les interactions physique avec les autres elements de la scene
+        playerMovement.rb.bodyType = RigidbodyType2D.Dynamic;
+        currentHealth = maxHealth;
+        healthBar.SetHealthUI(currentHealth);
     }
 
     // Fait "clignoter" le personnage pour voir qu'il est invincible

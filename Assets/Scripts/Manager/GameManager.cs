@@ -27,12 +27,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadSceneAsync(2);
     }
 
-    public void Respawn()
-    {   
-        SaveManager.instance.AddCoinsToBank(PlayerInventory.instance.currentCoins);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     // Revenir au menu principal
     public void FinishGame()
     {   

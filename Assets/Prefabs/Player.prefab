@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e196f74c7897f91dab0ce5684e2efa6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  rb: {fileID: 0}
   isGrounded: 0
   groundCheckLeft: {fileID: 4262770426447572306}
   groundCheckRight: {fileID: 6718367348537825824}
@@ -230,8 +231,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   maxHealth: 100
-  currenHealth: 0
+  currentHealth: 0
   healthBar: {fileID: 0}
+  playerMovement: {fileID: 265734713014726454}
+  gameOverManager: {fileID: 0}
   graphics: {fileID: 0}
 --- !u!114 &1518640728394973821
 MonoBehaviour:

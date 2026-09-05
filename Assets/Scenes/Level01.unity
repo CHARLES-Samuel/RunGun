@@ -823,6 +823,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab3e5d4cf188d3bd197877c5de4511c0, type: 3}
+--- !u!1 &429990184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5295487546986980139, guid: bdc8010f509e44ca0a4cbf18a2610540, type: 3}
+  m_PrefabInstance: {fileID: 7763415841318946439}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &481134269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3292353816452404459, guid: 24b969d7384cad449804ae9743542458, type: 3}
@@ -960,6 +965,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 537882328499604256, guid: 1f488a59dc13fe3809b0f9098f00f7be, type: 3}
+      propertyPath: gameOverUI
+      value: 
+      objectReference: {fileID: 429990184}
+    - target: {fileID: 537882328499604256, guid: 1f488a59dc13fe3809b0f9098f00f7be, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1519685745}
     - target: {fileID: 3616809753455934613, guid: 1f488a59dc13fe3809b0f9098f00f7be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 950.72473
@@ -8000,6 +8013,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8216888210834290306, guid: 06c5977210ddbfae082a5aae78b00883, type: 3}
   m_PrefabInstance: {fileID: 717301252166738145}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1519685745 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8320616831918160415, guid: 06c5977210ddbfae082a5aae78b00883, type: 3}
+  m_PrefabInstance: {fileID: 717301252166738145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519685739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d49ce9ff77cd375b7ac347e2c187ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!114 &1560817758 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8120881113125083073, guid: 06c5977210ddbfae082a5aae78b00883, type: 3}
@@ -8220,6 +8244,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1797019793624584571, guid: ab3e5d4cf188d3bd197877c5de4511c0, type: 3}
   m_PrefabInstance: {fileID: 755570580}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2117040431 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 537882328499604256, guid: 1f488a59dc13fe3809b0f9098f00f7be, type: 3}
+  m_PrefabInstance: {fileID: 653983209}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc445a726bc1fd1994a1aa21f71201c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &717301252166738145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8276,6 +8311,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1494524149}
+    - target: {fileID: 8320616831918160415, guid: 06c5977210ddbfae082a5aae78b00883, type: 3}
+      propertyPath: gameOverManager
+      value: 
+      objectReference: {fileID: 2117040431}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8415,6 +8454,10 @@ PrefabInstance:
       propertyPath: playerWeapon
       value: 
       objectReference: {fileID: 1560817758}
+    - target: {fileID: 1118168943916397317, guid: bdc8010f509e44ca0a4cbf18a2610540, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2117040431}
     - target: {fileID: 2051417547350713493, guid: bdc8010f509e44ca0a4cbf18a2610540, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.54159
@@ -8471,6 +8514,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5295487546986980139, guid: bdc8010f509e44ca0a4cbf18a2610540, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806833379346499784, guid: bdc8010f509e44ca0a4cbf18a2610540, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2117040431}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

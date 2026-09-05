@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3616809753455934613}
   - component: {fileID: 6710295568727057015}
   - component: {fileID: 7365777721855536009}
+  - component: {fileID: 537882328499604256}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -45,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fbe2304cca282fb7ab2756bde313bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  weaponMenu: {fileID: 0}
 --- !u!114 &7365777721855536009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,4 +60,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveData
   playerData:
-    EquipedWeaponID: smg_01
+    equipedWeaponID: smg_01
+    coins: 0
+    weaponsDeblocked:
+    - smg_01
+--- !u!114 &537882328499604256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7258950603179969596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc445a726bc1fd1994a1aa21f71201c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  gameOverUI: {fileID: 0}
+  playerHealth: {fileID: 0}
