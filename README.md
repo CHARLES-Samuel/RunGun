@@ -57,4 +57,3 @@ Ce prototype n'est que le début. Voici la direction que j'aimerais prendre pour
 * **Objets Bonus (Power-ups) :** L'ajout de bonus temporaires à ramasser en cours de partie pour se sortir des situations difficiles et booster ses statistiques.
 * **Le mot de la fin :** J'ai encore des dizaines d'autres idées en tête ! Je n'ai peut-être pas encore toutes les compétences techniques pour les réaliser aujourd'hui, mais c'est **exactement** le but de ce projet : apprendre en pratiquant et repousser mes limites.
 ---
-*Dans le but de devenir meilleur*
